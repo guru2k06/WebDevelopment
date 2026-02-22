@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 700px; margin: 0 auto; }
+        h1 { text-align: center; }
+        .question { margin: 20px 0; padding: 10px; border: 1px solid #ddd; }
+        .question-text { font-weight: bold; margin-bottom: 10px; }
+        input[type="text"] { width: 100%; padding: 8px; margin: 5px 0; }
+        .radio-group { margin: 10px 0; }
+        input[type="submit"] { padding: 10px 30px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Examination</h1>
+        <form action="/examapp/OnlineExam.jsp" method="post">
+            <input type="hidden" name="action" value="submit">
+            
+            <label><strong>Seat Number:</strong></label>
+            <input type="text" name="Seat_no" required>
+            
+            <label><strong>Name:</strong></label>
+            <input type="text" name="Name" required>
+            
+            <div class="question">
+                <div class="question-text">Q1: HTML is a programming language.</div>
+                <div class="radio-group">
+                    <input type="radio" name="group1" value="True"> True &nbsp;&nbsp;
+                    <input type="radio" name="group1" value="False"> False
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Q2: CSS is used for styling web pages.</div>
+                <div class="radio-group">
+                    <input type="radio" name="group2" value="True"> True &nbsp;&nbsp;
+                    <input type="radio" name="group2" value="False"> False
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Q3: JavaScript can only run on servers.</div>
+                <div class="radio-group">
+                    <input type="radio" name="group3" value="True"> True &nbsp;&nbsp;
+                    <input type="radio" name="group3" value="False"> False
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Q4: MySQL is a relational database.</div>
+                <div class="radio-group">
+                    <input type="radio" name="group4" value="True"> True &nbsp;&nbsp;
+                    <input type="radio" name="group4" value="False"> False
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Q5: Tomcat is a web server for Java applications.</div>
+                <div class="radio-group">
+                    <input type="radio" name="group5" value="True"> True &nbsp;&nbsp;
+                    <input type="radio" name="group5" value="False"> False
+                </div>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
